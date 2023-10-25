@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+h1 {
+    color: #00395d;
+}
+
+
+#optionsList {
+    display: none;
+    margin-top: 20px;
+}
+#optionsList h2{
+    color:#00395d;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    width: 25%; /* Adjust width as needed */
+    margin: 10px;
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(8, 4, 255, 0.295);
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    color:#00395d;
+    font-weight: bold;
+}
+
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #00395d;
+   
+   
+}
+
+
+
+form {
+    margin: 20px 0;
+}
+
+input[type="submit"] {
+    background-color: #00395d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+#search-wrapper{
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.276);
+    align-items: stretch;
+    border-radius: 50px;
+    background-color: #fff;
+    margin: 5px;
+    overflow: hidden;
+    width: 50%;
+    box-shadow: 2px 1px 5px 1px rgba(0, 0, 0, 0.273);
+    
+    }
+    #search{
+      
+        border:none;
+        width:100%;
+        font-size: 16px;
+        margin: 15px;
+        
+    }
+    #search:focus{
+        outline: none;
+    }
+    .search-icon{
+        margin: 15px 0px 5px 15px;
+        color:#00395d;
+    }
+    #search-button{
+        border:none;
+        cursor: pointer;
+        color:#fff;
+        background-color:#00395d;
+        padding:0px 10px;
+    }
+
+  

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hostname Selection</title>
+</head>
+<body>
+   
+    <h1>Get any server related info</h1>
+  <!-- <input type="text" id="hostnameInput" placeholder="Enter hostname" onclick="changeShadowColor(this)"> -->
+   <!-- <button onclick="addHostname()">Add Hostname</button> -->
+
+   
+
+    <div id="search-wrapper">
+
+        <i class="search-icon fas fa-search"></i>
+      
+      <input type="text" id="search" placeholder="Enter the server name">
+      <!-- Add the "Select All" checkbox -->
+
+
+      <button id="search-button" onclick="addHostname()">Search</button>
+    
+     
+    </div>
+
+    <!-- Add the "Select All" checkbox -->
+
+
+    <div id="optionsList" style="display: none;">
+        <h2>Available Options:</h2>
+        <ul id="options"> 
+            <!-- Options will be dynamically added here -->
+            
+        </ul>
+        <input type="checkbox" id="selectAll" class="selectall" onclick="toggleCheckboxes(this)"><span style="font-size: 18px; font-weight: bold; color:#00395d">
+            Select All
+        </span>
+        <form action="submit.php" method="post">
+            <input type="submit" value="Submit Form">
+        </form>
+    </div> 
+
+    
+
+    
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/e03d7ac5cf.js" crossorigin="anonymous"></script>
+</body>
+</html>
