@@ -1,6 +1,3 @@
-// JavaScript code
-
-
 var search=document.getElementById('search');
 
 
@@ -17,17 +14,40 @@ document.getElementById('search-wrapper').style.border="1px solid rgba(0, 0, 0, 
 
 });
 
+// JavaScript code
+function openModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
 let hostnames = [];
 let options = ['Chef', 'Data', 'Patching', 'Change','Incident', 'Configuration'];
+
+function addHostnamesFromModal() {
+    const textarea = document.getElementById("serverNamesTextarea");
+    const input = textarea.value.trim();
+    const uploadedHostnames = input.split('\n').map(hostname => hostname.trim());
+    hostnames = hostnames.concat(uploadedHostnames);
+    // console.log(hostnames);
+   
+    textarea.value = "";
+    closeModal();
+    displayOptions();
+}
+
 
 function addHostname() {
     const input = document.getElementById("search");
     const hostname = input.value.trim();
-
     if (hostname) {
         hostnames.push(hostname);
+        // console.log(hostnames);
         input.value = "";
-
+       
         displayOptions();
     }
 }
@@ -58,14 +78,14 @@ function displayOptions() {
 }
 
 function selectOption(option, isSelected) {
-    if (isSelected) {
-        hostnames.push(option);
-    } else {
-        const index = hostnames.indexOf(option);
-        if (index !== -1) {
-            hostnames.splice(index, 1);
-        }
-    }
+    // if (isSelected) {
+    //     hostnames.push(option);
+    // } else {
+    //     const index = hostnames.indexOf(option);
+    //     if (index !== -1) {
+    //         hostnames.splice(index, 1);
+    //     }
+    // }
 
     // Check if any individual checkbox is unchecked
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
